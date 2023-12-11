@@ -3,145 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Functions</title>
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Home</title>
+
+<style>
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("bgimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+</style>
+
 </head>
+
 <body>
+    
+    <section>
+        <div class="container d-flex justify-content-center align-items-center min-vh-100">
+            <div class="box-area border border-warning-subtle rounded-5 p-5 bg-white bg-opacity-50">
+    
+                <form action="">
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Increment and Decrement</button>
+                     </div>
+                </form>
 
-    <h1>JavaScript Functionalities</h1>
+                <form action="">
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Toggle Accordion</button>
+                     </div>
+                </form>    
+                
+                <form action="">
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Password Check</button>
+                     </div>
+                </form>
+                    
+                <form>
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Show and Hide Password</button>
+                     </div>
+                </form>
+                    
+                <form>
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Dropdown</button>
+                     </div>
+                </form>
+                    
+                <form>
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Clock</button>
+                     </div>
+                </form>
+                    
+                <form>
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Add to Cart</button>
+                     </div>
+                </form>
+                    
+                <form>
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Calculator</button>
+                     </div>
+                </form>
+                    
+                <form>
+                     <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Uppercase and Lowercase</button>
+                     </div>
+                </form>
+                    
+                <form>
+                     <div class="input-group">
+                        <button class="btn btn-lg btn-dark w-100 fs-6">Geo-location</button>
+                     </div>
+                </form>
+                    
+            </div>
+        </div>
+      </section>
 
-    <h2>Increment and Decrement</h2>
-    <button onclick="increment()">Increment</button>
-    <span id="counter">0</span>
-    <button onclick="decrement()">Decrement</button>
-
-    <h2>Accordion</h2>
-    <button onclick="toggleAccordion()">Toggle Accordion</button>
-    <div id="accordion" class="hidden">
-        <p>This is still a work in progress</p>
-    </div>
-
-    <h2>Password Check</h2>
-    <input type="password" id="password" placeholder="Enter Password">
-    <button onclick="checkPassword()">Check Password</button>
-
-    <h2>Show and Hide Password</h2>
-    <input type="password" id="showPasswordInput">
-    <input type="checkbox" onclick="togglePasswordVisibility()"> Show Password
-
-    <h2>Dropdown</h2>
-    <select>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-    </select>
-
-    <h2>Clock</h2>
-    <div id="clock"></div>
-
-    <h2>Add to Cart</h2>
-    <button onclick="addToCart()">Add to Cart</button>
-    <span id="cart">0</span> items in cart
-
-    <h2>Simple Calculator</h2>
-    <input type="number" id="num1">
-    <input type="number" id="num2">
-    <button onclick="calculate()">Calculate</button>
-    <span id="result"></span>
-
-    <h2>Uppercase and Lowercase</h2>
-    <input type="text" id="textInput">
-    <button onclick="convertText()">Convert</button>
-    <span id="convertedText"></span>
-
-    <h2>Geo-location</h2>
-    <button onclick="getGeoLocation()">Get Geo-location</button>
-    <p id="geoLocation"></p>
-
-    <script>
-        // Increment and Decrement
-        let counter = 0;
-        function increment() {
-            counter++;
-            document.getElementById('counter').innerText = counter;
-        }
-        function decrement() {
-            counter--;
-            document.getElementById('counter').innerText = counter;
-        }
-
-        // Accordion
-        function toggleAccordion() {
-            const accordion = document.getElementById('accordion');
-            accordion.classList.toggle('hidden');
-        }
-
-        // Password Check
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            if (password === 'securepassword') {
-                alert('Password is correct!');
-            } else {
-                alert('Password is incorrect!');
-            }
-        }
-
-        // Show and Hide Password
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById('showPasswordInput');
-            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
-        }
-
-        // Clock
-        function updateClock() {
-            const clock = document.getElementById('clock');
-            const now = new Date();
-            const time = now.toLocaleTimeString();
-            clock.innerText = time;
-        }
-        setInterval(updateClock, 1000);
-
-        // Add to Cart
-        let cartItems = 0;
-        function addToCart() {
-            cartItems++;
-            document.getElementById('cart').innerText = cartItems;
-        }
-
-        // Simple Calculator
-        function calculate() {
-            const num1 = parseFloat(document.getElementById('num1').value);
-            const num2 = parseFloat(document.getElementById('num2').value);
-            const result = num1 + num2;
-            document.getElementById('result').innerText = `Result: ${result}`;
-        }
-
-        // Uppercase and Lowercase
-        function convertText() {
-            const textInput = document.getElementById('textInput').value;
-            const convertedText = textInput.toUpperCase();
-            document.getElementById('convertedText').innerText = convertedText;
-        }
-
-        // Geo-location
-        function getGeoLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                document.getElementById('geoLocation').innerText = 'Geolocation is not supported by this browser.';
-            }
-        }
-
-        function showPosition(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-            document.getElementById('geoLocation').innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
-        }
-    </script>
 
 </body>
 </html>
