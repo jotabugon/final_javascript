@@ -6,6 +6,24 @@
     <title>Add to Cart</title>
 </head>
 <body>
+
+    <h2>Add to Cart</h2>
+    <button onclick="addToCart()">Add to Cart</button>
+    <span id="cart">0</span> items in cart
+    <br><br><br><br>
+    <button onclick="goBack()">Back to Home</button>
+
+    <script>
+        let cartItems = 0;
+        function addToCart() {
+            cartItems++;
+            document.getElementById('cart').innerText = cartItems;
+        }
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
     
 </body>
 </html>

@@ -6,6 +6,24 @@
     <title>Uppercase and Lowercase</title>
 </head>
 <body>
+    <h2>Uppercase and Lowercase</h2>
+    <input type="text" id="textInput">
+    <button onclick="convertText()">Convert</button>
+    <span id="convertedText"></span>
+    <br><br><br><br>
+    <button onclick="goBack()">Back to Home</button>
+
+    <script>
+        function convertText() {
+            const textInput = document.getElementById('textInput').value;
+            const convertedText = textInput.toUpperCase();
+            document.getElementById('convertedText').innerText = convertedText;
+        }
+        
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
     
 </body>
 </html>

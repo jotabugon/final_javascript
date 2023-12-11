@@ -7,5 +7,24 @@
 </head>
 <body>
     
+    <h2>Clock</h2>
+    <div id="clock"></div>
+    <br><br><br><br>
+    <button onclick="goBack()">Back to Home</button>
+
+    <script>
+        function updateClock() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            clock.innerText = time;
+        }
+        setInterval(updateClock, 1000);
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
 </body>
 </html>

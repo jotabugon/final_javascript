@@ -7,5 +7,30 @@
 </head>
 <body>
     
+    <h2>Geo-location</h2>
+    <button onclick="getGeoLocation()">Get Geo-location</button>
+    <p id="geoLocation"></p>
+    <br><br><br><br>
+    <button onclick="goBack()">Back to Home</button>
+
+    <script>
+        function getGeoLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById('geoLocation').innerText = 'Geolocation is not supported by this browser.';
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById('geoLocation').innerText = `Latitude: ${latitude}, Longitude: ${longitude}`;
+        }
+        
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+    </script>
 </body>
 </html>
