@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Hide Password</title>
+</head>
+<body>
+    
+    <h2>Show and Hide Password</h2>
+    <input type="password" id="showPasswordInput">
+    <input type="checkbox" onclick="togglePasswordVisibility()"> Show Password
+    <br><br><br><br>
+    <button onclick="goBack()">Back to Home</button>
+
+    <Script>
+                // Show and Hide Password
+                function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('showPasswordInput');
+            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+        }
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+        
+    </Script>
+</body>
+</html>
